@@ -62,7 +62,7 @@ Shellshock, is a family of security bugs in the Unix Bash shell, Shellshock coul
 
 - Do you use redis or mongod? How to authentication them? What user of process mongod or redis?
 
-I use MongoDB Atlats. 
+I use MongoDB Atlas. 
 
 I connect to the MongoDB cluster by using RHEL 7, mongo shell:
 
