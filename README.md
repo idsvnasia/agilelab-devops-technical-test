@@ -42,8 +42,8 @@ Yes I always update latest production OS version, for instance: RHEL-8.3.
 For on-premiss sever I use password for ssh.
 
 For AWS EC2 server, I use key secret for example (idsvn.pem):
-chmod 400 idsvn.pem
-ssh -i "idsvn.pem" ubuntu@ec2-3-140-217-76.us-east-2.compute.amazonaws.com
+$ chmod 400 idsvn.pem
+$ - ssh -i "idsvn.pem" ubuntu@ec2-3-140-217-76.us-east-2.compute.amazonaws.com
 
 Password policy: upper & lower character + special key (@#$) + alphanumeric key.
 
@@ -51,8 +51,8 @@ Password policy: upper & lower character + special key (@#$) + alphanumeric key.
 - Do you use firewall on your server?
 
 Yes I use firewall on my server (just open the service ports):
-sudo firewall-cmd --zone=public --add-port=6443/tcp --permanent
-firewall-cmd --reload
+$ sudo firewall-cmd --zone=public --add-port=6443/tcp --permanent
+$ firewall-cmd --reload
 
 
 - Do you know Heartbleed, Shellshock and POODLE?
@@ -65,28 +65,28 @@ Shellshock, is a family of security bugs in the Unix Bash shell, Shellshock coul
 I use MongoDB Atlats. 
 
 I connect to the MongoDB cluster by using RHEL 7, mongo shell:
-mongo "mongodb+srv://cluster0.wxl9x.mongodb.net/myFirstDatabase" --username kuber
+$ mongo "mongodb+srv://cluster0.wxl9x.mongodb.net/myFirstDatabase" --username kuber
 
 
 - How do you deploy code to server? Do you use git pull for deployment?
 
 run "docker-compose up --build" to generate container image. e.g.:   nginx-plus
 
-docker tag nginx-plus idsvnasia/nginx-plus:1.0
+$ docker tag nginx-plus idsvnasia/nginx-plus:1.0
 
-docker push idsvnasia/nginx-plus:1.0
+$ docker push idsvnasia/nginx-plus:1.0
 
-docker pull idsvnasia/nginx-plus:1.0
+$ docker pull idsvnasia/nginx-plus:1.0
 
 or in the nginx-plus-deployment.yaml, claim:
 
 image:  dsvnasia/nginx-plus:1.0
 
-kubectl  apply -f  nginx-plus-deployment.yaml
+$ kubectl  apply -f  nginx-plus-deployment.yaml
 
-kubectl  get deploy
+$ kubectl  get deploy
 
-kubectl  get pods
+$ kubectl  get pods
 
 
 
