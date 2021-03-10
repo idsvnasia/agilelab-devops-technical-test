@@ -27,8 +27,8 @@ Yes trash should be clean when change role to save memory in hard disk.
 
 Yes, I set the server name in /etc/hostname and.or /etc/host, for example:
 
-gitlab.idsvn.asia
-192.168.0.200   gitlab.idsvn.asia   gitlab
+-   gitlab.idsvn.asia
+-   192.168.0.200   gitlab.idsvn.asia   gitlab
 
 - How long uptime of your server? Do you update new version OS?
 
@@ -43,9 +43,9 @@ For on-premiss sever I use password for ssh.
 
 For AWS EC2 server, I use key secret for example (idsvn.pem):
 $ chmod 400 idsvn.pem
-$ - ssh -i "idsvn.pem" ubuntu@ec2-3-140-217-76.us-east-2.compute.amazonaws.com
+$ ssh -i "idsvn.pem" ubuntu@ec2-3-140-217-76.us-east-2.compute.amazonaws.com
 
-Password policy: upper & lower character + special key (@#$) + alphanumeric key.
+Password policy: upper & lower case character + special key (@#$) + alphanumeric key.
 
 
 - Do you use firewall on your server?
@@ -65,6 +65,8 @@ Shellshock, is a family of security bugs in the Unix Bash shell, Shellshock coul
 I use MongoDB Atlats. 
 
 I connect to the MongoDB cluster by using RHEL 7, mongo shell:
+
+and authenticate my username "kuber":
 $ mongo "mongodb+srv://cluster0.wxl9x.mongodb.net/myFirstDatabase" --username kuber
 
 
