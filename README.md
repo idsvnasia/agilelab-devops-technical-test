@@ -70,7 +70,7 @@ mongo "mongodb+srv://cluster0.wxl9x.mongodb.net/myFirstDatabase" --username kube
 
 - How do you deploy code to server? Do you use git pull for deployment?
 
-docker-compose to generate contaner image. e.g.:   nginx-plus
+run "docker-compose up --build" to generate container image. e.g.:   nginx-plus
 
 docker tag nginx-plus idsvnasia/nginx-plus:1.0
 
@@ -78,8 +78,16 @@ docker push idsvnasia/nginx-plus:1.0
 
 docker pull idsvnasia/nginx-plus:1.0
 
-or in the nginx-plus-deployment.yaml, I claim:
+or in the nginx-plus-deployment.yaml, claim:
+
 image:  dsvnasia/nginx-plus:1.0
+
+kubectl  apply -f  nginx-plus-deployment.yaml
+
+kubectl  get deploy
+
+kubectl  get pods
+
 
 
 Credited to [xluffy](https://github.com/xluffy)
